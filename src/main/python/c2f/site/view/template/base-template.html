@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		    <meta http-equiv="Pragma" content="no-cache" />
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title>{% block title %}raulfortes.com.br{% endblock%}</title>
+			<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+			<meta name="verify-v1" content="9dYgQuEfkfAuJsaQZykfbUBeRyG1Gf768VxiAldfcpw=" />		
+	</head>
+	<body>
+		<div class="wrapper-main">
+			{% include "template/header.html" %}
+			<div class="wrapper-content">
+				{% block wrapper_content %}
+				{% endblock %}
+			</div>
+			{% include "template/footer.html" %}
+		</div>
+		
+	</body>
+</html>
