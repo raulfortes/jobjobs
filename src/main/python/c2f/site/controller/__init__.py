@@ -1,9 +1,7 @@
 # -*- coding: utf8 -*-
 from bottle import request
-#from c2f.site.tools.cookie import get_client_cookie
 
-#__all__ = ['home', 'product', 'department', 'search', 'static', 'admin', 'template', 'client', 'address','mysql']
-__all__ = ['home','static','curriculo']
+__all__ = ['home','static']
 
 def get_context_variables():
     variables = {}
