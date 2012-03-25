@@ -1,11 +1,28 @@
 ## -*- coding: utf-8 -*-
 
 import logging
-from c2f.site import app
+from c2f.site import app, request, response, redirect
 from c2f.site.model.produto_model import Produto 
 from c2f.site.model.sessao_model import Sessao 
+from c2f.site.utils import cookie
 
 logger = logging.getLogger(__name__)
+
+
+@app.route("/test/cookie")
+def test_cookie():
+    return cookie.get_cookie(name="jss")
+
+@app.route("/test/set_cookie")
+def test_set_cookie():
+    cookie.set_cookie(name="jss", value="Teste de cookie")
+    redirect("/test/cookie")
+
+@app.route("/test/del_cookie")
+def test_del_cookie():
+    cookie.del_cookie(name="jss")
+    redirect("/test/cookie")
+
 
 @app.route("/mongoinsert")
 def mongoinsert():

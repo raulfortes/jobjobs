@@ -3,18 +3,16 @@
 	<head>
 		    <meta http-equiv="Pragma" content="no-cache" />
 			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-			<title>{% block title %}raulfortes.com.br{% endblock%}</title>
-			<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
-			<meta name="verify-v1" content="9dYgQuEfkfAuJsaQZykfbUBeRyG1Gf768VxiAldfcpw=" />		
+			<title>{% block title %}jobjobs.com.br{% endblock%}</title>
 	</head>
 	<body>
 		<div class="wrapper-main">
-			{% include "template/header.html" %}
+			{% include "template/header.tpl" %}
 			<div class="wrapper-content">
 				{% block wrapper_content %}
 				{% endblock %}
 			</div>
-			{% include "template/footer.html" %}
+			{% include "template/footer.tpl" %}
 		</div>
 		
 	</body>

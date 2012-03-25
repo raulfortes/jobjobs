@@ -1,4 +1,4 @@
-{% extends "template/base-template.html" %}
+{% extends "template/base-template.tpl" %}
 
 {% block wrapper_content %}
 	<div class="left-container" style="width:200px; float:left">

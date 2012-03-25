@@ -1,7 +1,7 @@
 # -*- coding: utf8 -*-
 from bottle import request
 
-__all__ = ['home','static','test']
+__all__ = ['home','static','controlaccess','test']
 
 def get_context_variables():
     variables = {}
