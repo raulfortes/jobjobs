@@ -58,3 +58,13 @@ Baixar todas as dependências do projeto pelo pip para o virtualenv em uso
     pip install -r ~/jobjobs/docs/pip-requirements.txt 
 
 ---------------
+
+Run
+-----
+1. Executar run.py
+
+::
+
+    python ~/jobjobs/src/main/python/c2f/run.py
+
+---------------
