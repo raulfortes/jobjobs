@@ -3,25 +3,30 @@ from c2f.site.utils.mysql import MySQL
 
 class User ( MySQL ):
 
+    id = None
+    name = None
+    email = None
+    password = None
+
     def getAll( self ):
         self.cursor.execute(
         "SELECT id,name,email "+
         "FROM user" )
         return self.cursor.fetchall()
 
-    def save( self, name, email ):
+    def save( self ):
         if self.cursor.execute(
         "INSERT INTO user(" +
             "`name`," +
             "`email`" +
         ") VALUES (" +
-            "'" + str(name)  + "'," +
-            "'" + str(email) + "'"  +
+            "'" + str(self.name)  + "'," +
+            "'" + str(self.email) + "'"  +
         ")"):
         
-            id = self.conn.insert_id()
+            self.id = self.conn.insert_id()
             self.conn.commit()
-            return id
+            return True
         else:
             return False
 
