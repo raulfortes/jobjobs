@@ -7,7 +7,8 @@ from c2f.site.form.user import UserForm
 
 logger = logging.getLogger(__name__)
 
-@app.route("/user/register" , method=['GET', 'POST'])
+
+@app.route("/user/register", method=['GET', 'POST'])
 def register():
     form = UserForm(request.POST)
     if request.method == 'POST' and form.validate():
