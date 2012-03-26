@@ -1,10 +1,10 @@
 # -*- coding: utf8 -*-
-from bottle import request
+#from bottle import request
 
-__all__ = ['home','static','controlaccess','test']
+__all__ = ['home','static','controlaccess','user','test']
 
-def get_context_variables():
-    variables = {}
+#def get_context_variables():
+#    variables = {}
     
 #    if request.get_cookie('user_details'):
 #        cookie = get_client_cookie()
@@ -12,4 +12,4 @@ def get_context_variables():
     
     # variables['base_url'] = 'http://localhost:8080'
     
-    return variables
+#    return variables

@@ -10,6 +10,7 @@
 
 {% block content_container %}
 	
-		<a href="/login">Login</a>
+		<a href="/login">Login</a></br>
+		<a href="/user/register">Register</a>
 	
 {% endblock %}
