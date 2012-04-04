@@ -12,7 +12,7 @@ def index():
     #view = template.get_template("home.html")
 
     #return view.render()
-    return template("home.tpl")
+    return template("home.html")
 
 
 @app.route("/logado")
@@ -21,4 +21,4 @@ def index_logado():
     #view = template.get_template("home.html")
 
     #return view.render()
-    return template("home.tpl")
+    return template("home.html")

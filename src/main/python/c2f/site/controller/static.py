@@ -18,6 +18,15 @@ def get_google():
     response._status_code_ = 200
     return response
 
+# js release version
+@app.get('/static/<filepath:path>')
+def get_file(filepath):
+    if parameters.getboolean('system', 'dev_mode'):
+        set_no_cache()
+    return static_file(filepath, root=os.path.join(base_path, 'site', 'static'))
+
+
+
 
 # js release version
 @app.get('/static/js/<file_name:re:[a-z]+([\-\.\_]{1}[a-z]+)*([\.\-\_]{1}[0-9]+)+\.min\.js$>')

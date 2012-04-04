@@ -2,26 +2,23 @@
 
 import logging
 
-from c2f.site import app, template, request
+from c2f.site import app, template, request, redirect
+from c2f.site.form.login import LoginForm
 
 logger = logging.getLogger(__name__)
 
-
-@app.route("/login")
-def index():
-
-    return template("login.tpl")
-
-
-@app.route('/login', method='POST')
-def login_process():
-    name = request.forms.get('name')
-    password = request.forms.get('password')
-
-    if name == password:
-        return "<p>Your login was correct</p>"
-    else:
-        return "<p>Login failed</p>"
+@app.route('/login', method=['GET', 'POST'])
+def login():
+    message = None
+    form = LoginForm(request.POST)
+    if request.method == 'POST' and form.validate():
+        email = form.email.data
+        password = form.password.data
+        if email == password:
+            redirect('/')
+        else:
+            message = 'Login failed !'
+    return template("login.html", form=form, message=message)    
 
 
 class AuthenticationException(Exception):

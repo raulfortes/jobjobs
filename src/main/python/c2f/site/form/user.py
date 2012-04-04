@@ -1,5 +1,4 @@
-from wtforms import Form, BooleanField, TextField, validators
-
+from wtforms import Form, TextField, validators
 
 class UserForm(Form):
     name = TextField('Nome', [validators.Length(min=4, max=25)])

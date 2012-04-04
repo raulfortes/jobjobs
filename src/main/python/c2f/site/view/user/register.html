@@ -1,4 +1,14 @@
+{% extends "template/base-template-two-columns.html" %}
 
+{% block title %}
+	{{ super() }} - Login
+{% endblock %}
+
+{% block left_container %}
+
+{% endblock %}
+
+{% block content_container %}
 Register
 
 <form action="/user/register" method="POST">
@@ -21,4 +31,5 @@ Register
 	
 	<input type="submit" value="Salvar" />
 	      
-</from>
+</from>	
+{% endblock %}

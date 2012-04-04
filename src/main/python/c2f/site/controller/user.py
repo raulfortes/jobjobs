@@ -17,4 +17,4 @@ def register():
         user.email = form.email.data
         user.save()
         redirect('register')
-    return template("user/register.tpl", form=form)
+    return template("user/register.html", form=form)
